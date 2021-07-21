@@ -209,6 +209,9 @@ footer .container {
   width: 100px;
 }
 
+footer p {
+  text-align: center; }
+
 html {
   scroll-behavior: smooth;
 }
