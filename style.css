@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background: #192637;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.navbar .container {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar label {
+  font-size: 1.6em;
+  font-weight: 700;
+}
+.navbar label span {
+  color: #fb9039;
+}
+
+nav ul {
+  margin-top: -12px;
+
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 1.3em;
+}
+
+nav ul li a {
+  position: relative;
+  padding: 0 2px;
+}
+
+nav ul li a::after{
+content: '';
+position: absolute;
+bottom: -7px;
+left: 0;
+width: 0;
+height: 3px;
+background-color: #fb9039;
+transition: .7s;
+
+}
+
+nav ul li a:hover::after {
+width: 100%;
+}
+
+.hero {
+  height: 90vh;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+}
+
+.hero .hero-text {
+  flex: 1;
+  border-left: solid 10px #fb9039;
+  padding-left: 1em;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(-3rem);
+  animation: fadeInUp 2s forwards;
+}
+
+.hero-text p {
+  font-size: 2em;
+  font-weight: 300;
+  color: #b4b4b4;
+  position: relative;
+  width: max-content;
+  font-family: monospace;
+}
+
+.hero-text p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: typewriter 3s steps(18) 2s forwards;
+  background: #192637;
+}
+
+.hero-text p::after {
+  content: '';
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: .1em;
+    background: #b4b4b4;
+    animation: typewriter 3s steps(18) 2s forwards, blink 750ms steps(18)infinite;
+}
+
+
+
+@keyframes typewriter {
+  to {
+      left: 100%;
+  }
+}
+@keyframes blink {
+  to {
+      background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.hero img {
+  width: 50%;
+}
+
+.about {
+  background: #213249;
+  height: 80vh;
+  padding-top: 7%;
+}
+
+.about h2 {
+  margin-bottom: 0.5em;
+  font-size: 2.4em;
+}
+
+.about .text {
+  color: #e5e5e5;
+}
+
+.row {
+  display: flex;
+  padding-top: 1.3em;
+  border-top: solid 2px #fb9039;
+}
+
+.port {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.port h2 {
+  font-size: 2.4em;
+}
+
+.port h2 span {
+  color: #fb9039;
+}
+
+.projects {
+  margin-top: 3em;
+  display: flex;
+}
+
+.projects img {
+  width: 50%;
+}
+
+.p-text {
+  flex: 1;
+  padding-top: 2em;
+}
+
+.p-text h3 {
+  font-weight: 300;
+  color: #b4b4b4;
+}
+
+.p-text h2 {
+  font-weight: 400;
+}
+
+.p-text p {
+  color: #e5e5e5;
+}
+
+.projectsr {
+  margin: 4em 0;
+  display: flex;
+}
+
+.projectsr img {
+  width: 50%;
+}
+
+.projectsr .p-text {
+  margin-left: 1em;
+}
+
+footer {
+  padding-bottom: 3em;
+  background: #213249;
+  padding-top: 2em;
+}
+
+footer .container {
+  display: flex;
+}
+
+.col1 h1 {
+  margin-bottom: 0.5em;
+}
+
+.col1 ul li {
+  margin-top: 1em;
+}
+
+.col1 {
+  flex: 1;
+  margin-top: 10px;
+}
+
+.col2 {
+  flex: 1;
+  margin-top: 10px;
+}
+
+.col2 h1 {
+  margin-bottom: 0.5em;
+}
+
+.col2 form label {
+  margin-top: 1em;
+}
+
+.col2 input {
+  margin-top: 1em;
+}
+
+.col2 textarea {
+  margin-top: 1em;
+}
+
+.col2 button {
+  margin-top: 1em;
+  padding: 8px 20px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 15px;
+  background: #fb9039;
+  color: white;
+  width: 80px;
+  transition: background-color 0.5s;
+  cursor: pointer;
+  border: solid 2px #fb9039;
+
+}
+
+.col2 button:hover {
+  border: solid 2px #fb9039;
+  background-color: transparent;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 1em;
+  color: #b4b4b4;
+}
+
+footer ul li span {
+  color: #e5e5e5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.menu {
+  display: none;
+}
+
+.exit {
+  display: none;
+}
+
+.live {
+  width: 80px;
+  background: #324b6d;
+  color: #e5e5e5;
+  border: none;
+  padding: 3px 7px;
+  border-radius: 10px;
+  transition: .5s;
+  font-size: .8em;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: .5px;
+}
+
+.live:hover{
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.live:hover img {
+  display: block;
+}
+
+a .live img {
+  width: 30px;
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 90%;
+  }
+
+  .hero img {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1em;
+    margin-left: 1em;
+  }
+
+  .menu {
+    display: block;
+    width: 30px;
+    float: right;
+    margin-right: 1em;
+    margin-top: 0.2em;
+    cursor: pointer;
+  }
+
+  .navbar {
+    height: 80px;
+  }
+
+  .navbar .container {
+    display: unset;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  nav {
+    text-align: center;
+    background-color: #213249;
+    padding: 1em 0;
+    display: none;
+    animation: transitionIn 0.5s;
+  }
+
+  .hero {
+    height: 80vh;
+    text-align: left;
+    position: relative;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 15%;
+  }
+
+  .about {
+    height: 100vh;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .text {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  .projects,
+  .projectsr {
+    flex-direction: column;
+    text-align: left;
+  }
+
+.projectsr .p-text {
+  margin-left: unset;
+}
+
+  .port img {
+    width: 100%;
+  }
+
+  .port h2 {
+    text-align: left;
+  }
+
+  .projectsr img {
+    order: 2;
+    margin-top: 1em;
+  }
+
+  .projects img {
+    margin-top: 1em;
+  }
+
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .container div {
+    margin-bottom: 2em;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .exit {
+    display: none;
+    width: 25px;
+    float: right;
+    margin-right: 1em;
+    margin-top: 0.2em;
+    cursor: pointer;
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+ 
+
+}
+
+.show {
+  display: block;
+
+}
+
+.none {
+display: none;
+}
