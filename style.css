@@ -16,7 +16,7 @@ a {
 }
 
 body {
-  background: #1f3044;
+  background: #192367;
   color: white;
   font-family: "Poppins", sans-serif;
 }
@@ -92,7 +92,7 @@ nav ul li a:hover {
   bottom: 0;
   left: 0;
   animation: typewriter 3s steps(18) 2s forwards;
-  background: #1f3044;
+  background: #192367;
 }
 
 .hero-text p::after {
